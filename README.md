@@ -81,10 +81,13 @@ In this project, the test suite includes obfuscated functions that contain the s
 ## Why Obfuscation?
 
 1. **Security and Academic Integrity:**
-  - Obfuscation helps protect the integrity of the test suite and prevents unauthorized access to the solution.
-  - It discourages plagiarism and ensures that students engage with the problem-solving process rather than relying on pre-existing code snippets.
+
+- Obfuscation helps protect the integrity of the test suite and prevents unauthorized access to the solution.
+- It discourages plagiarism and ensures that students engage with the problem-solving process rather than relying on pre-existing code snippets.
+
 2. **Focus on Algorithmic Understanding:**
-  - By obfuscating the functions, the emphasis is placed on understanding the underlying algorithm and logic rather than relying on pre-existing code snippets.
+
+- By obfuscating the functions, the emphasis is placed on understanding the underlying algorithm and logic rather than relying on pre-existing code snippets.
 
 ## FAQ
 

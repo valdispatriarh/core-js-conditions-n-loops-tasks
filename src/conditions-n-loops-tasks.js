@@ -78,8 +78,18 @@ function getMaxNumber(a, b, c) {
  * {x: 1, y: 1}, {x: 2, y: 8} => false
  * {x: 1, y: 1}, {x: 2, y: 8} => false
  */
-function canQueenCaptureKing(/* queen, king */) {
-  throw new Error('Not implemented');
+function canQueenCaptureKing(queen, king) {
+  let result = false;
+  if (queen.x === king.x) {
+    result = true;
+  }
+  if (queen.y === king.y) {
+    result = true;
+  }
+  if (Math.abs(queen.y - king.y) === Math.abs(queen.x - king.x)) {
+    result = true;
+  }
+  return result;
 }
 
 /**
@@ -170,8 +180,54 @@ function convertToRomanNumerals(num) {
  *  '10,5'    => 'one zero point five'
  *  '1950.2'  => 'one nine five zero point two'
  */
-function convertNumberToString() {
-  throw new Error('Not implemented');
+function convertNumberToString(str) {
+  let result = '';
+  for (let i = 0; i < str.length; i += 1) {
+    if (i >= 1) {
+      result += ' ';
+    }
+    const x = Number(str[i]);
+    switch (x) {
+      case 0:
+        result += 'zero';
+        break;
+      case 1:
+        result += 'one';
+        break;
+      case 2:
+        result += 'two';
+        break;
+      case 3:
+        result += 'three';
+        break;
+      case 4:
+        result += 'four';
+        break;
+      case 5:
+        result += 'five';
+        break;
+      case 6:
+        result += 'six';
+        break;
+      case 7:
+        result += 'seven';
+        break;
+      case 8:
+        result += 'eight';
+        break;
+      case 9:
+        result += 'nine';
+        break;
+      default:
+    }
+    if (str[i] === '-') {
+      result += 'minus';
+    }
+    if (str[i] === ',' || str[i] === '.') {
+      result += 'point';
+    }
+  }
+  return result;
 }
 
 /**
@@ -186,8 +242,16 @@ function convertNumberToString() {
  *  '0123210'   => true
  *  'qweqwe'    => false
  */
-function isPalindrome(/* str */) {
-  throw new Error('Not implemented');
+function isPalindrome(str) {
+  let newStr = '';
+  let result = false;
+  for (let i = str.length - 1; i >= 0; i -= 1) {
+    newStr += str[i];
+    if (str === newStr) {
+      result = true;
+    }
+  }
+  return result;
 }
 
 /**
@@ -292,7 +356,7 @@ function getSpiralMatrix(/* size */) {
  *
  * @example:
  *  [                 [
- *    [1, 2, 3],        [7, 4, 1],
+ *    [1, 2,  3],        [7, 4, 1],
  *    [4, 5, 6],  =>    [8, 5, 2],
  *    [7, 8, 9]         [9, 6, 3]
  *  ]                 ]
@@ -357,10 +421,9 @@ function shuffleChar(/* str, iterations */) {
  * @param {number} number The source number
  * @returns {number} The nearest larger number, or original number if none exists.
  */
-function getNearestBigger(/* number */) {
+function getNearestBigger() {
   throw new Error('Not implemented');
 }
-
 module.exports = {
   isPositive,
   getMaxNumber,
